@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    //gradle sdk
+    compile gradleApi()
+    //groovy sdk
+    compile localGroovy()
+
+    compile 'com.android.tools.build:gradle:3.1.4'
+
+    compile 'org.javassist:javassist:3.23.0-GA'
+
+    compile 'commons-io:commons-io:2.6'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+group = 'eason.linyuzai'
+version = '1.0.0'
+
+/*uploadArchives {
+    repositories {
+        mavenDeployer {
+            //提交到远程服务器：
+             repository(url: "https://dl.bintray.com/linyuzai/maven/") {
+                authentication(userName: "linyuzai", password: "t88510930")
+             }
+            //本地的Maven地址设置为D:/repos
+            //repository(url: uri('/Users/linyuzai/AndroidStudioProjects/Plugins'))
+        }
+    }
+}*/

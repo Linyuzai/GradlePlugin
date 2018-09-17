@@ -1,4 +1,4 @@
-package eason.linyuzai.permission;
+package eason.linyuzai.permissions;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.METHOD)
-public @interface Permission {
-    String[] request();
+public @interface EasonPermissions {
+    String[] value();
 }
